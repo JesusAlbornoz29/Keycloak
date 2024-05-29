@@ -18,20 +18,20 @@ public class VentaController {
     private IVentaService ventServ;
 
     //crear una nueva venta
-    @PostMapping("/vendedor/create")
+    @PostMapping("/create")
     public String createVentao(@RequestBody Venta vent) {
         ventServ.saveVenta(vent);
         return "Venta creada correctamente";
     }
 
     //obtener todas las ventas
-    @GetMapping("/vendedor/getall")
+    @GetMapping("/getall")
     public List<Venta> getVentas () {
         return ventServ.getVentas();
     }
 
     //Modificar los datos de una venta
-    @PutMapping("/vendedor/edit")
+    @PutMapping("/edit")
     public String editVenta(@RequestBody Venta vent) {
         ventServ.editVenta(vent);
         return "Venta editada correctamente";

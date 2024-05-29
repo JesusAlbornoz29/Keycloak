@@ -23,7 +23,7 @@ public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests()
-                .requestMatchers(HttpMethod.GET, "/ventas/vendedor", "/ventas/vendedor/**").hasAnyRole(VENDEDOR, ADMIN)
+                .requestMatchers(HttpMethod.GET, "/ventas", "/ventas/**").hasAnyRole(VENDEDOR, ADMIN)
                 .requestMatchers(HttpMethod.GET, "/productos", "/productos/**").hasAnyRole(REPOSITOR, ADMIN)
                 .requestMatchers(HttpMethod.GET, "/test/admin", "/test/admin/**").hasRole(ADMIN)
                 .anyRequest().authenticated();

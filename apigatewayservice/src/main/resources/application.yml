@@ -14,6 +14,10 @@ spring:
                 predicates:
                 - Path=/ventas/**
                 uri: http://localhost:8081
+            - id: gestion-usuarios
+              predicates:
+                  - Path=/users/**
+              uri: http://localhost:8181
 
     security:
         oauth2:
@@ -24,7 +28,7 @@ spring:
                 registration:
                     keycloak-test:
                         authorization-grant-type: authorization_code
-                        client-id: client-administracion-de-usuarios
+                        client-id: client-gateway
                         client-secret: iBneH9GtxFL0yEJpNMy6nnLmKxhxKyW4
 #                        provider: api-gateway-service
                         redirect-uri: http://localhost:9090/login/oauth2/code/keycloak

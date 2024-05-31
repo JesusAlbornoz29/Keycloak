@@ -25,7 +25,7 @@ public class WebSecurityConfig {
         http.authorizeHttpRequests()
                 .requestMatchers(HttpMethod.GET, "/ventas", "/ventas/**").hasAnyRole(VENDEDOR, ADMIN)
                 .requestMatchers(HttpMethod.GET, "/productos", "/productos/**").hasAnyRole(REPOSITOR, ADMIN)
-                .requestMatchers(HttpMethod.GET, "/test/admin", "/test/admin/**").hasRole(ADMIN)
+                .requestMatchers(HttpMethod.GET, "/users", "/users/**").hasRole(ADMIN)
                 .anyRequest().authenticated();
         http.oauth2ResourceServer()
                 .jwt()

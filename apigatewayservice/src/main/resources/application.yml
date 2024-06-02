@@ -14,10 +14,10 @@ spring:
                 predicates:
                 - Path=/ventas/**
                 uri: http://localhost:8081
-            - id: gestion-usuarios
-              predicates:
-                  - Path=/users/**
-              uri: http://localhost:8181
+            -   id: gestion-usuarios
+                predicates:
+                - Path=/users/**
+                uri: http://localhost:8081
 
     security:
         oauth2:

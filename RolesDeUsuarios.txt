@@ -1,0 +1,18 @@
+PARA ESTE PROYECTO SE UTILIZO LA V23.0.0 de Keycloak
+
+UserrName: user-administrador
+Passworrd: 123
+Rol: Administrador
+
+UserrName: user-repositor
+Passworrd: 123
+Rol: repositor
+
+UserrName: user-vendedor
+Passworrd: 123
+Rol: Vendedor
+
+
+
+Instalacion de Keycloak 23.0.0: 
+docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:23.0.0 start-dev
